@@ -1,0 +1,19 @@
+<%= session[:user_id] == 1 ? 'ログイン済み' : 'ログイン前' %>
+
+<hr>
+
+session[:user_id] = <%= session[:user_id]  %>
+<br>
+cookies[:user_id] = <%= cookies[:user_id]  %>
+
+<hr>
+
+<%= link_to 'login' , static_pages_login_path %>
+<br>
+<%= link_to 'logout', static_pages_logout_path %>
+
+<style>
+  html {
+    font-size: 200%;
+  }
+</style>
